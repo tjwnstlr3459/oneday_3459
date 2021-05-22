@@ -1,0 +1,204 @@
+div {
+  font-family: "Nanum Gothic", sans-serif;
+}
+.con1 {
+  border: 0px solid black;
+  width: 95%;
+  height: 350px;
+  margin-left: 30px;
+}
+.con2 {
+  border: 0px solid black;
+  width: 85%;
+  height: 280px;
+  margin-left: 60px;
+}
+.con2 > div {
+  float: left;
+}
+.con2_img {
+  border: 0px solid black;
+  width: 40%;
+  height: 300px;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.con2_text {
+  border: 0px solid black;
+  width: 42%;
+  height: 300px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#slider-div img {
+  padding-top: 70px;
+  width: 100%;
+  height: 100%;
+}
+#slider-div {
+  width: 90%;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.con3 {
+  border: 1px solid lightgrey;
+  width: 100%;
+  height: 700px;
+}
+.donation_pan {
+  border: 0px solid springgreen;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0px;
+  overflow: hidden;
+  background-color: rgba(211, 211, 211, 0.241);
+  font-size:13px;
+}
+.dona_navi {
+  width: 100%;
+  height: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.535);
+}
+.dona_navi > div {
+  float: left;
+  width: 25%;
+  height: 100%;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px
+}
+.dona_navi :nth-child(4) {
+  border: 0px solid black;
+}
+
+.dona_kind {
+  border: 0px solid black;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.dona_kind > div {
+  border: 0px solid black;
+  float: left;
+  width: 250px;
+  height: 120px;
+  margin-left: 60px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.kind1 > label {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: rgba(135, 207, 235, 0.645);
+}
+.kind2 > label {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: rgba(135, 207, 235, 0.645);
+}
+
+.dona_radio {
+  border: 0px solid black;
+  width: 100%;
+  height: 40%;
+}
+.dona_radio > div {
+  font-size:13px;
+  border: 1px solid lightgrey;
+  width: 90%;
+  height: 35px;
+  margin-left: 45px;
+  margin-top: 25px;
+}
+.dona_btn {
+  border: 0px solid black;
+  width: 100%;
+  height: 60px;
+}
+
+.dona_kind input[type="radio"] {
+  display: none;
+}
+.dona_radio input[type="radio"] {
+  margin-top: 10px;
+}
+label {
+  font-size:13px;
+  width: 20%;;
+  height: 20px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+label > div {
+  border-right: 0px solid rgba(0, 217, 255, 0.344);
+  width: 15%;
+}
+.dona_kind input[type="radio"]:checked + label {
+  background-color: rgba(0, 183, 255, 0.898);
+  color: white;
+}
+
+.dona_kind > div > label {
+  width: 100%;
+  height: 90%;
+  float: left;
+  line-height: 30px;
+  font-size: 16px;
+}
+.dona_radio * {
+  float: left;
+}
+.dona_radio label {
+  width: 95%;
+  line-height: 33px;
+}
+.dona_btn > div {
+  float: left;
+  width: 80px;
+  height: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+.dona_btn :nth-child(2) {
+  background-color: orange;
+}
+
+.ment1 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+.dona_naviCon1 {
+  background-color: rgba(135, 207, 235, 0.645);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.dona_radio_con1 {
+  border-radius: 10px;
+  background-color: rgba(135, 207, 235, 0.645);
+}
+.dona_radio_con2 {
+  border-radius: 10px;
+  background-color: rgba(135, 207, 235, 0.645);
+}
+.dona_radio_con3 {
+  border-radius: 10px;
+  background-color: rgba(135, 207, 235, 0.645);
+}

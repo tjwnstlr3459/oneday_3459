@@ -1,0 +1,65 @@
+body {
+  background-color: white;
+}
+
+/* 컬럼 */
+.table th {
+  width: 15%;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* 컬럼값 */
+.table td {
+  width: 35%;
+  font-size: 16px;
+}
+
+/* 하단 버튼 */
+.text-center {
+  margin-bottom: 20px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+/* 좋아요 색칠하기 */
+.love {
+  color: red;
+}
+
+/* 좋아요 정렬 */
+.like {
+  text-align: center;
+}
+
+/* 댓글 입력 창*/
+.inputCommentBox > form > ul {
+  display: flex;
+  height: 64px;
+  align-content: center;
+}
+
+.inputCommentBox > form > ul > li {
+  height: 100%;
+}
+
+/* 댓글 아이콘 */
+.inputCommentBox > form > ul > li > i {
+  line-height: 64px;
+}
+
+/* 정렬 + 중앙 길이 최대 */
+.inputCommentBox > form > ul > li:nth-child(1) {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.inputCommentBox > form > ul > li > button {
+  width: 64px;
+}
+
+.inputCommentBox > form > ul > li > * {
+  height: 100%;
+}

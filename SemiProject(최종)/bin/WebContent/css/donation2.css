@@ -1,0 +1,123 @@
+#toggle1 {
+  width: 75%;
+  height: 100px;
+  margin-left: 40px;
+  outline: none;
+  border: 1px solid lightgrey;
+}
+#toggle2 {
+  width: 75%;
+  height: 100px;
+  margin-left: 40px;
+  border: 1px solid lightgrey;
+}
+.con5_1 {
+  width: 100%;
+  border: 0px solid black;
+  height: 70px;
+}
+.con5_1 > input {
+  width: 3%;
+  margin-left: 45px;
+}
+
+input {
+  outline: none;
+  border: 1px solid lightgrey;
+}
+textarea {
+  border: 1px solid lightgrey;
+}
+.con4_pan {
+  border: 0px solid black;
+  margin: 0 auto;
+  width: 1000px;
+  height: 830px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.con4 {
+  border: 0px solid black;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  font-size:13px;
+}
+.con4_1 div{
+	border-radius: 10px;
+}
+.cont4_1 input{
+	font-size:13px;
+}
+.info {
+  border: 0px solid black;
+  width: 100%;
+  height: 30px;
+}
+.info > div {
+  border: 0px solid black;
+  float: left;
+}
+.info_content {
+  border: 0px solid black;
+  width: 100%;
+  height: 150px;
+}
+.info_con {
+  border: 0px solid black;
+
+  width: 100%;
+  height: 50%;
+}
+.info_con > div {
+  float: left;
+}
+.agree {
+  border: 1px solid lightgrey;
+  width: 75%;
+  height: 40px;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+.info > div:first-child {
+  margin-left: 50px;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+.info > div:nth-child(2) {
+  margin-left: 30px;
+  width: 50%;
+}
+.info_con > div:first-child {
+  margin-left: 50px;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+.con4_2 {
+  margin-top: 30px;
+  border: 0px solid black;
+  width: 100%;
+  height: 280px;
+  margin-bottom:70px;
+}
+
+.agree * {
+  float: left;
+  margin-top: 10px;
+}
+.agree1.agree2 {
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  margin-top: 13px;
+}

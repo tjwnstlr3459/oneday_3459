@@ -1,0 +1,290 @@
+@charset "UTF-8";
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+div,
+table,
+thead,
+tr,
+td,
+tbody,
+form,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+body,
+input,
+textarea,
+select,
+button,
+table {
+  font: 14px "Noto Sans KR", "sans-serif";
+}
+
+.layout-wrap {
+  width: 100%;
+  min-width: 1136px;
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 84px;
+  background: #fff;
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 0 4px 0 rgba(62, 62, 62, 0.1);
+  box-shadow: 0 0 4px 0 rgba(62, 62, 62, 0.1);
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .header-wrap {
+  padding: 15px 3.9%;
+  overflow: hidden;
+}
+
+header .header-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .home {
+  display: block;
+  float: left;
+  width: 130px;
+  height: 53px;
+  margin-right: 12%;
+}
+
+header .home img {
+  width: 100%;
+}
+
+header .menu-btn {
+  display: none;
+}
+
+header .nav {
+  float: left;
+  padding: 10px 0;
+}
+
+header .nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .nav-item {
+  float: left;
+  color: #333;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+header .nav-item:nth-of-type(n + 2) {
+  padding-left: 40px;
+}
+
+header .right-col {
+  float: right;
+  padding: 10px 0;
+}
+
+header .right-col::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .right-col .login {
+  float: left;
+}
+
+header .right-col .login::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .right-col .login-item {
+  position: relative;
+  float: left;
+  padding: 11px 20px;
+  color: #333;
+  font-size: 13px;
+}
+
+header .right-col .login-item:nth-of-type(n + 2)::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 12px;
+  left: 0;
+  width: 1px;
+  height: 15px;
+  background: #ccc;
+}
+
+header .right-col .interior-link {
+  display: block;
+  float: left;
+  width: 187px;
+  height: 31px;
+  text-align: center;
+  color: rgba(0, 183, 255, 0.959);
+  font-size: 13px;
+  border-radius: 40px;
+  border: 2px solid rgba(0, 183, 255, 0.959);
+}
+
+header .mobile-panel {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  min-width: 1200px;
+}
+
+.content-banner {
+  height: 572px;
+  margin-top: 86px;
+  padding: 160px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  background-color: darkgrey;
+}
+
+.content-banner .banner-tit {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 62px;
+  letter-spacing: -1px;
+}
+
+.content-banner .banner-btn {
+  display: block;
+  width: 330px;
+  margin: 0 auto;
+  line-height: 74px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 37px;
+  color: #fff;
+  background: rgba(0, 183, 255, 0.959);
+}
+
+footer {
+  width: 100%;
+  min-width: 1200px;
+  height: 181px;
+  padding: 42px 0 48px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #53545f;
+}
+
+footer .footer-wrap {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+footer .footer-wrap .footer-logo {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 50px;
+  height: 58px;
+}
+
+footer .footer-wrap .link-list {
+  margin-left: 120px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 13px;
+}
+
+footer .footer-wrap .link-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer .footer-wrap .link-list-item {
+  float: left;
+  margin-right: 30px;
+}
+
+footer .footer-wrap .footer-detail {
+  padding-left: 120px;
+  opacity: 0.5;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer .footer-wrap .footer-detail::after {
+  content: "";
+  display: block;
+  clear: both;
+}

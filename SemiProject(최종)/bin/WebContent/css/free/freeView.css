@@ -1,0 +1,31 @@
+/* 컬럼 */
+.table th {
+  width: 15%;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* 컬럼값 */
+.table td {
+  width: 35%;
+  font-size: 16px;
+}
+
+/* 하단 버튼 */
+.text-center {
+  margin-bottom: 20px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+/* 좋아요 색칠하기 */
+.love {
+  color: red;
+}
+
+/* 좋아요 정렬 */
+.like {
+  text-align: center;
+}

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.table-light>td>button{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.table-primary{
+    background-color: rgba(0, 171, 250, 0.959);
+    color: white;
+    height: 90px;
+}
+.table-light>td:nth-child(1){
+    background-color: rgba(0, 171, 250, 0.959);
+}
+table td{
+    border: 1px solid white;
+}

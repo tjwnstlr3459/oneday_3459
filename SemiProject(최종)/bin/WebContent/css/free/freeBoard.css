@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* 글쓰기 버튼 우측 정렬 */
+table + div {
+  text-align: right;
+}
+
+/* 페이지 중앙 처리 */
+.pageNavi {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+table > thead > tr {
+  /* background-color: rgb(80, 215, 248); */
+}
+
+table > thead > tr > th {
+  text-align: center;
+}
+
+table > tbody tr > td {
+  text-align: center;
+}
+/* 글제목 정렬 : left */
+table > tbody tr > td:nth-child(2) {
+  text-align: left;
+}

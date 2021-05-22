@@ -1,0 +1,123 @@
+div{
+    border: 0px solid black;
+  }
+  #slider-div img {
+  width: 100%;
+  height: 100%;
+  }
+  #slider-div {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .donahighNavi >*{
+    text-align: center;  
+  }
+
+  .donaConList>*{
+    text-align: center;
+    font-size:14px;
+    margin-top: 10px;
+    
+  }
+  
+  .modifyDonation{
+  	width:50px;
+    border: none;
+    background-color: rgba(211, 211, 211, 0.535);
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+  }
+  .donaModal >div{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .donaModal >div >div{
+    width: 20%;
+    text-align: left;
+    float: left;
+  }
+  .donaModal *{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .alertModal{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.alertWrap{
+    background-color:rgba(207, 206, 206, 0.945);
+    padding: 30px 50px;
+    border-radius: 10px;
+    width: 500px;
+
+    min-width: 350px
+}
+.radioHover label:hover{
+  cursor: pointer;
+}
+.radioHover > input{
+  margin-left: 15px;
+}
+
+.modiBtn1,.modiBtn2,.modiBtn3{
+  border: px solid black;
+  width: 90px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: white;
+  line-height:5px;
+}
+.table-responsive{
+	width: 90%;
+	margin: 0 auto;
+}
+.donaBottom{
+	border:0px solid black;
+	width: 90%;
+	height: 250px;
+	margin: 0 auto;
+}
+.donaBottom>div{
+	float: left;
+	margin-left: 35px;
+}
+.donaBottom1{
+	border: 0px solid black;
+	width: 45%;
+	height: 90%;
+	font-size: 13px;
+}
+.donaBottom2{
+	border: 0px solid black;
+	width: 45%;
+	height: 90%;
+}
+.donaBottom2 > img{
+	
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
