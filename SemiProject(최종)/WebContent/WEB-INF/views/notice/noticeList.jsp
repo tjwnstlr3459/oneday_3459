@@ -52,7 +52,7 @@ ArrayList<Notice> list = (ArrayList<Notice>) request.getAttribute("list");
 
 #notice {
 
-	padding-top: 50px; 
+	padding-top: 100px; 
 
 	width: 90%;
 
