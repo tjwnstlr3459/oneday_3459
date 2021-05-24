@@ -1,5 +1,3 @@
-<%@page import="notice.model.vo.Notice"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
      <!-- JSTL 라이브러리 등록 -->
@@ -49,8 +47,6 @@
 		<div id="pageNavi">${pagenavi }</div>	
 		</fieldset>
 	</div>
-	
-	
-	<%@include file="/WEB-INF/views/common/footer.jsp" %>
+	<jsp:include page="/WEB-INF/views/common/footer.jsp"/>
 </body>
 </html>
