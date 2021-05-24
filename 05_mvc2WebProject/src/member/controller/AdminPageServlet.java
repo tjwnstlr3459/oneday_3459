@@ -38,7 +38,7 @@ public class AdminPageServlet extends HttpServlet {
 		//3.비니니스로직
 		ArrayList<Member> list = new MemberService().selectAllMember();
 		//4.결과처리
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/member/adminPage.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/member/adminPage1.jsp");
 		
 		request.setAttribute("list", list);
 		rd.forward(request, response);

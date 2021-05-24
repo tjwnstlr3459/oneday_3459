@@ -38,12 +38,17 @@
 						<%} %>
 					</th>
 				</tr>
+				
+				
 				<tr class="table-light">
 					<th>내용</th>
 					<th colspan="3">
 						<%=n.getNoticContentBr()%>
 					</th>
 				</tr>
+				
+				
+				
 				<tr class="table-light">
 					<th colspan="4" style="text-align:center;">
 					<button class="btn btn-info" onclick="history.go(-1);">이전화면</button>

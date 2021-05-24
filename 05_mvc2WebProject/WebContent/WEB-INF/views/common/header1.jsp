@@ -1,27 +1,24 @@
 <%@page import="member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%
-    Member m = (Member)session.getAttribute("m");
+    <!-- JSTL 라이브러리 등록 -->
+    <%@ 
+    taglib uri ="http://java.sun.com/jsp/jstl/core" prefix="c" 
     %>
+    <%--Member m = (Member)session.getAttribute("m");--%>
 	<!-- 폰트어썸(아이콘) -->
 	<link rel="stylesheet" href="/fontawesome/css/all.css">
 	<script type="text/javascript" src="/fontawesome/js/all.js"></script>
-	
 	<!-- 부트스트랩 CSS -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
-	
 	<!-- 글꼴 적용(NoteSans 폰트) -->
 	<link rel="stylesheet" href="/css/font.css">
-	
 	<!-- 기본 CSS -->
 	<link rel="stylesheet" href="/css/default.css">
-	
 	<!-- jQuery라이브러리 추가(2개) -->
 	<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
 	<!-- 부트스트랩용 jQuery -->
 	<script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-	
 	<!-- 로고 -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="/">Junsik World</a>
@@ -65,16 +62,21 @@
 			
 			<!-- 로그인/회원가입 -->
 			<!-- 태그가 달라도 클래스가 같아서 같은 스타일이 화면에 연출된다 -->
-			<%if(m== null){ %>
-			<button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target=".modal">로그인</button>
-			<a class="btn btn-secondary my-2 my-sm-0" href="/joinFrm">회원가입</a>
-			<%}else{ %>
-			<a class="btn btn-secondary my-2 my-sm-0" href="/mypage1"><%=m.getMemberName() %></a>
-			<a class="btn btn-secondary my-2 my-sm-0" href="/logout">로그아웃</a>
-			<%} %>
+			<c:choose>
+				<c:when test="${empty  sessionScope.m }">
+					<button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target=".modal">로그인</button>
+					<a class="btn btn-secondary my-2 my-sm-0" href="/joinFrm">회원가입</a>
+				</c:when>
+				<c:otherwise>
+					<a class="btn btn-secondary my-2 my-sm-0" href="/mypage1">${sessionScope.m.memberName }</a>
+					<a class="btn btn-secondary my-2 my-sm-0" href="/logout">로그아웃</a>
+				</c:otherwise>
+			</c:choose>
+			
 		</div>
 	</nav>
-	<%if(m==null){ %>
+	<c:if test="${empty sessionScope.m }">
+	
 	<!-- 로그인 클릭시 모달 만들기 -->
 	<div class="modal">
 		<div class="modal-dialog" role="document">
@@ -110,7 +112,7 @@
 			</div>
 		</div>
 	</div>
-	<%} %>
+	</c:if>
 	
 	<script>
 		function initInputs(){

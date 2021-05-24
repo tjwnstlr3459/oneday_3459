@@ -38,7 +38,7 @@ public class NoticeListServlet extends HttpServlet {
 		//받아야할 값이 list와 pageNavi라서 vo에서 두개를 같이받을 객체를 생성했다
 		NoticePageData npd = new NoticeService().selectNoticeList(reqPage);
 		//4.결과처리
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/notice/noticeList.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/notice/noticeList1.jsp");
 		request.setAttribute("list", npd.getList());
 		request.setAttribute("pageNavi", npd.getPageNavi());
 		rd.forward(request, response);
