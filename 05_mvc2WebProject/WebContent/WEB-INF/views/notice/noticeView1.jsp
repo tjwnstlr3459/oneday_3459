@@ -36,13 +36,12 @@
 							<c:if test="${n.filename != null }">
 								<img src="/img/file.png" width="16px">${n.filename }
 								<a href="/fileDown?noticeNo=${n.noticeNo }">${n.filename }</a>
-							</c:if></th>
+							</c:if>
+						</th>
 					</tr>
-					
-					
 					<tr class="table-light">
 						<th>내용</th>
-						<th colspan="3">${n.noticeContentBr}</th>
+						<th colspan="3">${n.noticContentBr}</th>
 					</tr>
 					
 					
@@ -65,8 +64,6 @@
 		</fieldset>
 		<!-- 로그인이 되야 작성가능하게 (댓글입력창)-->
 		<c:if test="${not empty sessionScope.m }">
-
-
 			<div class="inputCommentBox">
 				<form action="/insertComment" method="post">
 					<ul>

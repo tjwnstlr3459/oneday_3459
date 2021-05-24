@@ -36,7 +36,7 @@ public class NoticeViewServlet extends HttpServlet {
 		//3.로직처리
 		NoticeViewData nvd = new NoticeService().selectNoticeView(reqPage);
 		//4.결과처리
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/notice/noticeView.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/notice/noticeView1.jsp");
 		request.setAttribute("n", nvd.getN());
 		request.setAttribute("list", nvd.getList());
 		rd.forward(request, response);
