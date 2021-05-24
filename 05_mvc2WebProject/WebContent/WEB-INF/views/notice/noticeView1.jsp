@@ -1,12 +1,7 @@
-
-<%@page import="member.model.vo.NoticeComment"%>
-<%@page import="notice.model.vo.Notice"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- JSTL 라이브러리 등록 -->
-<%@ 
-    taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@  taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,12 +10,10 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp" />
-
 	<div class="container">
 		<fieldset>
 			<legend>공지사항</legend>
 			<table class="table" id="noticeView" style="width: 100%">
-				
 					<tr class="table-info">
 						<th colspan="4">${n.noticeTitle }</th>
 					</tr>
@@ -43,8 +36,6 @@
 						<th>내용</th>
 						<th colspan="3">${n.noticContentBr}</th>
 					</tr>
-					
-					
 					<tr class="table-light">
 						<th colspan="4" style="text-align: center;">
 							<button class="btn btn-info" onclick="history.go(-1);">이전화면</button>
@@ -57,9 +48,6 @@
 							</c:if>
 						</th>
 					</tr>
-
-
-
 			</table>
 		</fieldset>
 		<!-- 로그인이 되야 작성가능하게 (댓글입력창)-->
@@ -83,8 +71,6 @@
 			</div>
 		</c:if>
 		<!-- 댓글 출력 시작 -->
-
-
 		<div class="commentBox">
 			<c:forEach items="${list }" var="nc">
 				<c:if test="${nc.ncLevel==1}">
@@ -150,10 +136,8 @@
 							</ul>
 						</c:if>
 					</c:forEach>
-
 				</c:if>
 			</c:forEach>
-
 		</div>
 	</div>
 	<script>
