@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="member">
+
+
+
+  <!-- alias설정을 m으로 했기에 m만적어도 된다 -->
+  <select id="selectOneMember" parameterType="m" resultType="m">
+  	select
+  		member_id as memberId,
+  		member_pw as memberPw,
+  		member_name as memberName,
+  		phone,
+  		address,
+  		gender
+  	from member where member_id=#{memberId} and member_pw=#{memberPw}
+							<!-- alias에 m을 설정했기에 값만 꺼내온다 -->
+  </select>
+  
+  
+  
+  
+  <!-- 반환해줘야할값이 result = int니까 resultType 적용안해도 저절로 정수로 반환 -->
+  <insert id="insertMember" parameterType="m">
+  	insert into member values(#{memberId},#{memberPw},#{memberName},#{phone},#{address},#{gender})
+  </insert>
+  
+  
+   <select id="selectOneMemberId" parameterType="string" resultType="m">
+  	select
+  		member_id as memberId,
+  		member_pw as memberPw,
+  		member_name as memberName,
+  		phone,
+  		address,
+  		gender
+  	from member where member_id=#{memberId}
+  </select>
+  
+  <update id="updateMember" parameterType="m">
+  	update member set member_Pw=#{memberPw}, member_Name=#{memberName}, phone=#{phone}, address=#{address}, gender=#{gender}
+  	where member_Id=#{memberId}
+  </update>
+  
+  <delete id="deleteMember" parameterType="string">
+  	delete member where member_id=#{memberId}
+  </delete>
+  
+  <select id="allMember" resultType="m">
+  	select 
+  		member_id as memberId,
+  		member_pw as memberPw,
+  		member_name as memberName,
+  		phone,
+  		address,
+  		gender
+  	 from member
+  </select>
+  
+  <select id="idSearch" parameterType="map" resultType="m">
+  	select 
+  		member_id as memberId,
+  		member_pw as memberPw,
+  		member_name as memberName,
+  		phone,
+  		address,
+  		gender
+  	 from member where member_name=#{memberName} and phone=#{phone}
+  </select>
+  
+   <select id="pwSearch" parameterType="map" resultType="m">
+  	select 
+  		member_id as memberId,
+  		member_pw as memberPw,
+  		member_name as memberName,
+  		phone,
+  		address,
+  		gender
+  	 from member where member_Id=#{memberId} and phone=#{phone}
+  </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
