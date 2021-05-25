@@ -16,7 +16,7 @@
 		<tr>
 			<th>번호</th><th>아이디</th><th>이름</th><th>주소</th><th>내용</th>
 		</tr>
-		<c:forEach items="${list} }" var="i" varStatus="count">
+		<c:forEach items="${list}" var="i" varStatus="count">
 		<tr>
 			<th>${count.count }</th>
 			<th>${i.cafeId }  </th>
