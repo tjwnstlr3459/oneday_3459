@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cafe">
+  <select id="selectOneCafe" parameterType="c" resultType="c">
+  	select
+  		cafe_id as cafeId,
+  		cafe_pw as cafePw,
+  		cafe_name as cafeName,
+  		cafe_addr as cafeAddr,
+  		cafe_info as cafeInfo
+  	from cafe_member where cafe_id=#{cafeId} and cafe_pw=#{cafePw}
+  </select>
+  
+  <insert id="insertCafe" parameterType="c">
+  	insert into cafe_member values(#{cafeId}, #{cafePw}, #{cafeName}, #{cafeAddr},#{cafeInfo})
+  </insert>
+  
+  <select id="allCafe" resultType="c">
+  	select
+  		cafe_id as cafeId,
+  		cafe_pw as cafePw,
+  		cafe_name as cafeName,
+  		cafe_addr as cafeAddr,
+  		cafe_info as cafeInfo
+  	from cafe_member
+  </select>
+</mapper>
