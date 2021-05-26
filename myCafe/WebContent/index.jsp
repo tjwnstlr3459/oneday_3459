@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Mybatis 테스트</h1>
+	<h1>Mybatis Cafe 테스트</h1>
 	<hr>
 	<c:choose>
 		<c:when test="${empty sessionScope.c }">
