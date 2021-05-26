@@ -35,11 +35,60 @@
 				<a href="/mypage?memberId=${sessionScope.m.memberId }">마이페이지</a><br>
 				<a href="/logout">로그아웃</a><br>
 				<a href="/delete?memberId=${sessionScope.m.memberId }">회원탈퇴</a><br>
+				<hr>
+				<h2>동적쿼리 if문</h2>
+				<h3>전체회원 조회 시 포함할 항목선택</h3>
+				<form action="/ifTest" method="post">
+					<input type="checkbox" name="ckName"> 이름
+					<input type="checkbox" name="ckPhone"> 전화번호
+					<input type="checkbox" name="ckAddress"> 주소
+					<br>
+					<input type="submit" value="조회">
+				</form>
+				<hr>
+				<h2>동적쿼리 choose</h2>
+				<h3>아이디 또는 이름으로 검색</h3>
+				<form action="/chooseTest" method="post">
+					<select name="type">
+						<option value="id">아이디</option>
+						<option value="name">이름</option>
+					</select>
+					<input type="text" name="keyword">
+					<input type="submit" value="검색">
+				</form>
+				<hr>
+				<h3>동적쿼리 trim</h3>
+				<h3>이름과 주소를 입력하면 입력값이 포함된 회원 조회해서 출력</h3>
+				<h3>단, 이름이나 주소 중 1개만 입력한 경우에는 1개에 대해서만 조회해서 출력</h3>
+				<form action="/search2">
+					이름 : <input type="text" name="name"><br>
+					주소 : <input type="text" name="address"><br>
+					<input type="submit" value="검색">
+				</form>
+				
+				<h2>동적쿼리 foreach</h2>
+				<form action="/foreachTest" method="post">
+					<input type="checkbox" name="name" value="유저01">유저01
+					<input type="checkbox" name="name" value="유저03">유저03
+					<input type="checkbox" name="name" value="서준식">서준식
+					<br>
+					<input type="submit" value="선택회원정보조회">
+				</form>
 			</fieldset>
 		</c:otherwise>
 	</c:choose>
-	
-	
-	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

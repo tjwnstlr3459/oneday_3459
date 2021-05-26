@@ -56,6 +56,29 @@ public class MemberDao {
 		// TODO Auto-generated method stub
 		return session.selectOne("member.pwSearch",map);
 	}
+
+	public ArrayList<Member> ifTest(SqlSession session, HashMap<String, Object> map) {
+		List<Member> list = session.selectList("member.ifTest",map);
+		return (ArrayList<Member>)list;
+	}
+
+	public ArrayList<Member> chooseTest(SqlSession session, HashMap<String, Object> map) {
+		List<Member> list = session.selectList("member.chooseTest",map);
+		return (ArrayList<Member>)list;
+	}
+
+	public ArrayList<Member> chooseTest2(SqlSession session, HashMap<String, Object> map) {
+		List<Member> list = session.selectList("member.chooseTest2",map);
+		return (ArrayList<Member>)list;
+	}
+
+	public ArrayList<Member> foreachTest(SqlSession session, String[] name) {
+		//그냥 스트링배열이 넘어와도 자동으로 HashMap에 담아서 dao 넘겨주기에
+		//mapper에서는 받는 타입 map 이다
+		
+		List<Member> list = session.selectList("member.foreachTest",name);
+		return (ArrayList<Member>)list;
+	}
 	
 
 	

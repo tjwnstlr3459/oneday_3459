@@ -124,6 +124,51 @@ public class MemberService {
 		session.close();
 		return m;
 	}
+
+
+	public ArrayList<Member> ifTest(String ckName, String ckPhone, String ckAddress) {
+		SqlSession session = getSqlSession();
+		
+		//여러러 값을 넣기위해 맵을 사용해 넣기
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("ckName", ckName);
+		map.put("ckPhone", ckPhone);
+		map.put("ckAddress", ckAddress);
+		ArrayList<Member> list = new MemberDao().ifTest(session,map);
+		session.close();
+		return list;
+	}
+
+
+	public ArrayList<Member> chooseTest(String type, String keyword) {
+		SqlSession session = getSqlSession();
+		
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("type", type);
+		map.put("keyword", keyword);
+		ArrayList<Member> list = new MemberDao().chooseTest(session,map);
+		session.close();
+		return list;
+	}
+
+
+	public ArrayList<Member> chooseTest2(String name, String address) {
+		SqlSession session = getSqlSession();
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("name", name);
+		map.put("address", address);
+		ArrayList<Member> list = new MemberDao().chooseTest2(session,map);
+		session.close();
+		return list;
+	}
+
+
+	public ArrayList<Member> foreachTest(String[] name) {
+		SqlSession session =getSqlSession();
+		ArrayList<Member> list = new MemberDao().foreachTest(session,name);
+		session.close();
+		return list;
+	}
 }
 
 

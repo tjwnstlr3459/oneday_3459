@@ -78,6 +78,81 @@
   		gender
   	 from member where member_Id=#{memberId} and phone=#{phone}
   </select>
+  
+  <!-- if문 -->
+  <select id="ifTest" parameterType="map" resultType="m">
+  	select member_id as memberId
+  	<if test="ckName != null and ckName.equals('on')">
+  	,member_name as memberName
+  	</if>
+  	<if test="ckPhone != null and ckPhone.equals('on')">
+  	, phone
+  	</if>
+  	<if test="ckAddress != null">
+  	, address
+  	</if>
+  	from member
+  	</select>
+  	
+  	<!-- choose -->
+  	<select id="chooseTest" parameterType="map" resultType="m">
+  		select
+  			member_id as memberId,
+	  		member_pw as memberPw,
+	  		member_name as memberName,
+	  		phone,
+	  		address,
+	  		gender
+  		from member
+  		<choose>
+  			<when test="type.equals('name')">
+  				where member_name like '%'||#{keyword}||'%'
+  			</when>
+  			<when test="type.equals('id')">
+  				where member_id = #{keyword}
+  			</when>
+  		</choose>
+  	</select>
+  	
+  	<!-- choose2 -->
+  	<select id="chooseTest2" parameterType="map" resultType="m">
+  		select
+  			member_id as memberId,
+	  		member_pw as memberPw,
+	  		member_name as memberName,
+	  		phone,
+	  		address,
+	  		gender
+  		from member
+  		<!-- 대표적인 오류 -->
+  		<!-- 주소조건에 and때문에 -->
+  		<!-- trim prefix는 다음에 무조건 "where"설정 -->
+  		<!-- 주소만 검색시 and로 시작하여 오류 and 없애주기 -->
+  		<!-- prefixOverrides는 and로 시작하는걸 지워준다 -->
+  		<trim prefix="where" prefixOverrides="and|or">
+	  		<if test="!name.equals('')">
+	  			member_name like '%'||#{name}||'%'
+	  		</if>
+	  		<if test="!address.equals('')">
+	  			and address like '%'||#{address}||'%'
+	  		</if>
+  		</trim>
+  	</select>
+  	
+  	<!-- foreach -->
+  	<select id="foreachTest" parameterType="map" resultType="m">
+  		select
+  			member_id as memberId,
+	  		member_pw as memberPw,
+	  		member_name as memberName,
+	  		phone,
+	  		address,
+	  		gender
+  		from member where member_name in
+  		<foreach collection="array" item="memberName" open="(" close=")" separator=",">
+  			#{memberName}
+  		</foreach>
+  	</select>
 </mapper>
 
 
