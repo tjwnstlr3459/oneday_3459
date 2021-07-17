@@ -52,10 +52,10 @@
 			<%} %>
 			<div class="photoWrapper"></div>
 			<button class="btn btn-outline-info btn-block"
-							currentCount="0"
-							value=""
-							totalCount="<%=totalCount%>"
-							id="more-btn">더보기</button>
+				currentCount="0"
+				value=""
+				totalCount="<%=totalCount%>"
+				id="more-btn">더보기</button>
 		</fieldset>
 	</div>
 	<script>

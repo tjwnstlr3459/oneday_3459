@@ -41,7 +41,6 @@ public class PhotoMoreServlet extends HttpServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
 		new Gson().toJson(list,response.getWriter());
-		
 	}
 
 	

@@ -15,7 +15,7 @@ public class JDBCTemplate {
 			//1. 드라이버 등록
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//2. Connection객체 생성
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@1.220.236.74:15213:xe","semi_kh","1234");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.2:1521:xe","semi_kh","1234");
 
 			//자동으로 커밋되는 설정을 해제 -> default 자동커밋
 			conn.setAutoCommit(false);
